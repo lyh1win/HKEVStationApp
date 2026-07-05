@@ -6,4 +6,7 @@ export default defineConfig({
   server: {
     base:"/HKEVStationApp",
   },
+   html: {
+    title: 'HKEVStationApp',
+  },
 });
