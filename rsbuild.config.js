@@ -4,14 +4,6 @@ import { pluginReact } from '@rsbuild/plugin-react';
 export default defineConfig({
   plugins: [pluginReact()],
   server: {
-	  base:"/HKEVStationApp",
-    // Proxy CLP EV charger API to avoid CORS issues during dev
-    proxy: {
-      '/api/evcharger': {
-        target: 'https://api.clp.com.hk',
-        changeOrigin: true,
-        pathRewrite: (path) => path.replace(/^\/api/, ''),
-      },
-    },
+    base:"/HKEVStationApp",
   },
 });

@@ -30,7 +30,7 @@ const TILE_SOURCES = {
 
 const DEFAULT_CENTER = [114.1694, 22.3193];
 const DEFAULT_ZOOM = 12;
-const EV_API_URL = '/api/evcharger/list';
+const EV_API_URL = 'https://api.clp.com.hk/evcharger/list';
 
 const LANGS = [
   { code: 'en', label: 'English' },
