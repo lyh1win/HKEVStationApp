@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- Viewport: essential for Android WebView and mobile browsers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#1976d2" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>HK EV Locations</title>
+  <style>
+    /* Reset for full-screen map; critical in Android WebView */
+    html, body, #root {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: 0;
+      /* Prevent pull-to-refresh bounce in WebView */
+      overscroll-behavior: none;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./src/main.jsx"></script>
+</body>
+</html>

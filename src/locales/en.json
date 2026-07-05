@@ -1,0 +1,21 @@
+{
+  "app": {
+    "title": "HK EV Locations"
+  },
+  "menu": {
+    "mapStyle": "Map Style",
+    "topographic": "Topographic",
+    "imagery": "Imagery",
+    "evChargers": "EV Chargers",
+    "language": "Language"
+  },
+  "popup": {
+    "total": "Total",
+    "available": "Available",
+    "quick": "Quick",
+    "semiQuick": "Semi-Quick"
+  },
+  "attribution": {
+    "landsd": "Map from Lands Department"
+  }
+}
