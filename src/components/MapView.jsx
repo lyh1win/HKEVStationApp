@@ -169,7 +169,7 @@ function MapView() {
         const res = await fetch(EV_API_URL);
         const json = await res.json();
         if (json.code === 200 && json.data && json.data.geoLocationResult) {
-          addEVChargers(map, json.data.geoLocationResult, popupI18nRef);
+          addEVChargers(map, json.data.geoLocationResult, i18n);
           if (!showEVRef.current) {
             map.setLayoutProperty('ev-charger-circles', 'visibility', 'none');
           }
@@ -305,7 +305,7 @@ function MapView() {
   );
 }
 
-function addEVChargers(map, stations, lngRef) {
+function addEVChargers(map, stations, i18nInstance) {
   const features = stations.map((station) => ({
     type: 'Feature',
     geometry: {
@@ -347,12 +347,11 @@ function addEVChargers(map, stations, lngRef) {
 
   map.on('click', 'ev-charger-circles', (e) => {
     const props = e.features[0].properties;
-    const lng = lngRef.current || 'en';
     const labels = {
-      total: lng === 'zh' ? '總數' : 'Total',
-      available: lng === 'zh' ? '可用' : 'Available',
-      quick: lng === 'zh' ? '快充' : 'Quick',
-      semiQuick: lng === 'zh' ? '半快充' : 'Semi-Quick',
+      total: i18nInstance.t('popup.total'),
+      available: i18nInstance.t('popup.available'),
+      quick: i18nInstance.t('popup.quick'),
+      semiQuick: i18nInstance.t('popup.semiQuick'),
     };
 
     const el = document.createElement('div');
